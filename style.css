@@ -1,0 +1,50 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+body{
+    margin:0;
+    font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size:17px;
+    color:#FFFFFF;
+    line-height: 1.6;
+}
+
+#basic_header{
+    background-color:#002F6c;
+    height:10vh;
+    width:100vw;
+}
+
+#showcase{
+    background-image: url('Stadium.jpg');
+    background-size: cover;
+    background-position:center;
+    height:60vh;
+    width:100vw;
+
+    font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size:17px;
+    color:#002F6c;
+    text-align: center;
+    padding-top: 8px;
+}
+
+#login{
+    background-color: #002F6c;
+    height:30vh;
+    width:100vw;
+    text-align:center;
+    padding-top: 8px;
+}
+
+#team{
+    background-color:#FFFFFF;
+    font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size:17px;
+    text-align: center;
+    color:#002F6c;
+    padding-top: 8px;
+}
+
