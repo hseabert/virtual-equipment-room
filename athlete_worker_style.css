@@ -1,0 +1,105 @@
+	.btn-group button {
+		display: block; 
+		background-color: #002F6c; 
+		border: 2px solid black; 
+		color: white;
+		padding: 10px 24px;
+		cursor: pointer;
+		width: 11%; 
+	}
+
+	.btn-group button:not(:last-child) {
+		border-bottom: none; /* Prevent double borders */
+	}
+
+	/* Add a background color on hover */
+	.btn-group button:hover {
+		background-color: #E87722;
+	}
+
+	.search {
+	  width: 25%;
+	  display: flex;
+	  position: absolute;
+	  top: 5;
+	  right: 5px;
+	}
+
+	.searchTerm {
+	  width: 100%;
+	  border: 3px solid #002F6c;
+	  border-right: none;
+	  padding: 5px;
+	  height: 20px;
+	  border-radius: 5px 0 0 5px;
+	  outline: none;
+	  color: #002F6c;
+	}
+
+	.searchTerm:focus{
+	  color: #00B4CC;
+	}
+
+	.btn-search {
+	  border: 1px solid #002F6c;
+	  background: #002F6c;
+	  text-align: center;
+	  color: #FFFFFF;
+	  cursor: pointer;
+	  font-size: 20px;
+	  border: 2px solid black;
+	}
+	
+	.btn-search:hover {
+		background-color: #E87722;
+	}
+	
+	.search-results {
+		text-align: center;
+		padding: 100px 0;
+		font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+		border: 2px solid black;
+		color: black;
+		width: 70%;
+		margin: auto;
+		margin-top: 1%;
+	}
+	
+	.cardTop {
+		position: relative;
+		text-align: left;
+		text-indent: 10px;
+		font-size: 25px;
+		padding: 30px 0;
+		font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+		color: white;
+		background-color: #002F6c; 
+		border: 2px solid black;
+		width: 100%;
+		margin: auto;
+	}
+	
+	.btn-logout button {
+		position: relative;
+		float: right;
+		border: 2px solid black;
+		padding: 5px 12px;
+	}
+	
+	.btn-logout button:hover {
+		background-color: #D2D2D2;
+	}
+	
+	.issue-label {
+		position: relative;
+		font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+		text-align: center;
+		margin-left: 225px;
+		font-size: 25px;
+		border: 2px solid #002F6c;
+		width: 225px;
+		background-color: #E87722;
+		color: white;
+	}
+
+}

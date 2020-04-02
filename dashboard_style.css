@@ -1,0 +1,206 @@
+
+    .btn-group button {
+		display: block; 
+		background-color: #002F6c; 
+		border: 2px solid black; 
+		color: white;
+		padding: 10px 24px;
+		cursor: pointer;
+		width: 11%; 
+		/*margin-bottom: 5px;
+		margin-top: 5px;*/
+	}
+
+	/* Add a background color on hover */
+	.btn-group button:hover {
+		background-color: #E87722;
+	}
+	
+	.btn-group button:not(:last-child) {
+		border-bottom: none; /* Prevent double borders */
+	}
+    
+    .search {
+	  width: 25%;
+	  display: flex;
+	  position: absolute;
+	  top: 5;
+	  right: 5px;
+	}
+
+	.searchTerm {
+	  width: 100%;
+	  /* border: 1px solid #002F6c; */
+	  border-right: none;
+	  padding: 5px;
+	  height: 20px;
+	  border-radius: 5px 0 0 5px;
+	  outline: none;
+	  color: #002F6c;
+	}
+
+	.searchTerm:focus{
+	  color: #00B4CC;
+	}
+
+	.btn-search {
+	  background: #002F6c;
+	  text-align: center;
+	  color: #FFFFFF;
+	  cursor: pointer;
+	  font-size: 16px;
+	  /* border: 2px solid black; */
+	}
+	
+	.btn-search:hover {
+		background-color: #E87722;
+	}
+	
+	
+	.search-results {
+		text-align: center;
+        padding: 200px 25px;
+		font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+		color: black;
+		width: 70%;
+		margin: auto;
+		position: absolute;
+		left: 10%;
+        bottom: 50%;
+        top:25%;
+	}
+		
+	.card {
+		text-align: center;
+		padding: 100px 0;
+		font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+		color: black;
+		width: 70%;
+		margin: auto;
+        display: none;
+        position:absolute;
+        left: 16%;
+        bottom: 0%;
+        top:0%;
+	}
+	
+	.cardTop {
+		position: relative;
+		text-align: left;
+		text-indent: 10px;
+		font-size: 25px;
+		padding: 30px 0;
+		font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+		color: white;
+		background-color: #002F6c; 
+		border: 2px solid black;
+		width: 100%;
+		margin: auto;
+	}
+
+	.welcome {
+		text-align: center;
+		padding: 100px 0;
+		font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+		color: black;
+		width: 70%;
+		margin: auto;
+	}
+	
+	.logoutbtn {
+		position: relative;
+		border: 2px solid black;
+		background: #E87722;
+		text-align: center;
+		color: #FFFFFF;
+		font-size: 15px;
+		margin: auto;
+		float: right;
+	}
+
+	input[type=text], input[type=number] {
+		width: 65%;
+		padding: 12px 20px;
+		margin: 8px 0;
+		box-sizing: border-box;
+		font-size: 15px;
+	}
+
+	input[type=text]:focus, input[type=number]:focus {
+  		background-color: lightblue;
+	}
+
+	.select-css{
+		width: 55%;
+		padding: 12px 20px;
+		margin: 8px 0;
+		box-sizing: border-box;
+		font-size: 15px;
+	}
+    
+    .dropdown {
+		display: block;
+		position: relative;
+		width: 11%;
+	}
+	
+	.dropdown button{
+		display: block; 
+		background-color: #002F6c; 
+		border: 2px solid black; 
+		border-top: none;
+		color: white;
+		padding: 10px 24px;
+		cursor: pointer; 
+		width: 100%;
+	}
+	
+	.dropdown:hover button {
+		background-color: #E87722;
+	}
+	
+	.dropdown div {
+		margin-top: 1px;
+		background-color: #002F6c;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+		z-index: 1;
+		visibility: hidden;
+		position: absolute;
+		min-width: 11%;
+	}
+	
+	.dropdown:hover div {
+		visibility:visible;
+	}
+
+	.dropdown div a{
+		font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+		font-size: 13px;
+		text-align: center;
+		text-decoration: none;
+		display: block;
+		padding: 10px 24px;
+		color: white;
+		border: 2px solid black;
+		white-space: nowrap;
+	}
+	
+	.dropdown div a:hover {
+		background-color: #E87722;
+	}
+	
+	.dropdown div a:not(:last-child) {
+		border-bottom: none; /* Prevent double borders */
+	}
+
+	.submit-css {
+		border-radius: 12px;
+		font-size: 20px;
+	}
+
+	.submit-css:hover {
+		background-color:#002F6c;
+		color:#FFFFFF;
+		border-radius: 12px;
+		font-size: 20px;
+	}
