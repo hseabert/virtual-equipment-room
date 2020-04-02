@@ -1,0 +1,38 @@
+<?php 
+include_once('profile.php');
+session_start;
+$SESSION_['uid']=5950743;
+$data=getAthleteData($db,$SESSION_['uid']);
+?>
+
+<!DOCTYPE html>
+<html>    
+<head>        
+         <title> <?php echo $data['fname'] ?>'s Profile </title>
+</head>
+
+<body>
+    <?php echo $data['fname'] ?>'s Profile        
+    <h3>Personal Information  </h3>        
+        <table>
+                    <tr>                
+                     <td>id:</td><td><?php echo $data['id'] ?></td>
+                    </tr>
+                    <tr>                
+                     <td>Name:</td><td><?php echo $data['fname'] ?><?php echo $data['lname'] ?></td> 
+                    </tr> 
+                    <tr>
+                        <td>Class Year:</td><td><?php echo $data['class'] ?></td>
+                    </tr>
+                    <tr>
+                        <td>Sport Code:</td><td><?php echo $data['scode'] ?></td> 
+                    </tr>
+                    <tr>
+                        <td>Jnum:</td><td><?php echo $data['jnum'] ?></td> 
+                    </tr>
+                    <tr>
+                        <td>Inum:</td><td><?php echo $data['inum'] ?></td> 
+                    </tr>        
+        </table> 
+    </body>
+</html> 
