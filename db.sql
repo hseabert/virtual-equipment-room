@@ -28,7 +28,6 @@ CREATE TABLE athlete (
 	class CHAR(4),
 	scode VARCHAR(5),	-- foreign key to sport 
 	jnum INT,
-	inum INT,			-- foeign key to inum in equipment
 	PRIMARY KEY (id)
 );
 
@@ -45,8 +44,8 @@ CREATE TABLE equipment (
 	color VARCHAR(8),
 	brand VARCHAR(16),
 	model VARCHAR(16),
-	lockID INT,
-	plockID INT,
+	-- lockID INT,
+	-- plockID INT,
 	PRIMARY KEY (inum)
 );
 
@@ -61,23 +60,26 @@ CREATE TABLE iinfo (
 CREATE TABLE locker (
 	room INT,				-- code for room: 1, 2, 3 (1st floor, 2nd floor, stadium)
 	lockID INT,
-	PRIMARY KEY (room),
-	PRIMARY KEY (lockID)
+	PRIMARY KEY (room, lockID)
 );
 
 CREATE TABLE padlock (
 	combo VARCHAR(16),
 	plockID INT,
-	PRIMARY KEY (combo),
-	PRIMARY KEY (plockID)
+	PRIMARY KEY (combo, plockID)
 );
 
-CREATE TABLE assignment (
+CREATE TABLE eq_assign (
 	id VARCHAR(8),			-- athlete id
-	lockID INT,				-- lock reference
-	plockID INT,			-- padlock reference
 	inum INT,				-- inventory number
 	PRIMARY KEY (id)
+);
+
+CREATE TABLE lock_assign (
+	inum INT,
+	lockID INT,
+	plockID INT,
+	PRIMARY KEY(inum)
 );
 
 CREATE TABLE team (
