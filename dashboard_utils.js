@@ -17,7 +17,7 @@ var curDisplay = "welcome-content";
 
 function toggleDisplay(id) {
     // check if this id is in the array of div id's
-    var displayID = ["welcome-content", "add-item-field", "add-athlete-field"];
+    var displayID = ["welcome-content", "add-item-field", "add-athlete-field", "issue-item-field"];
     var errDisplay = "err-content";
                 
     // first turn off the current display

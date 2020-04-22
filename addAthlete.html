@@ -1,0 +1,53 @@
+<HTML>
+    <HEAD>
+    <TITLE>Add athlete</TITLE>
+    
+    </HEAD>
+    
+    <BODY>
+    <H1>Athlete information Form</H1>
+    
+    
+    <FORM name = "fmAddAthlete" method ="POST" action="addAthlete.php">
+    
+    <INPUT type="text" name = "fname" placeholder = "First Name"/>
+    <BR /><BR /> 
+    <INPUT type ="text" name = "lname" placeholder = "Last Name"/>
+    <BR /><BR /> 
+    <INPUT type ="text" name = "jnum" placeholder = "Jersey Number"/>
+    <BR /><BR /> 
+    <label for="class">Class year: </label>
+    <select id="class">
+        <option value="2020">2020</option>
+        <option value="2021">2021</option>
+        <option value="2022">2022</option>
+        <option value="2023">2023</option>
+      </select>
+    <BR /><BR /> 
+    <label for="scode">Sport code: </label>
+    <select id="scode">
+        <option value="wsoc">wsoc</option>
+        <option value="msoc">msoc</option>
+        <option value="wlx">wlx</option>
+        <option value="mlx">mlx</option>
+        <option value="wbb">wbb</option>
+        <option value="mbb">mbb</option>
+        <option value="wswm">wswm</option>
+        <option value="mswm">mswm</option>
+        <option value="wr">wr</option>
+        <option value="wglf">wglf</option>
+        <option value="mglf">mglf</option>
+        <option value="wxctf">wxctf</option>
+        <option value="mxctf">mxctf</option>
+      </select>
+    <BR /><BR /> 
+
+    <!-- Would be better to make sport & class year dropdown ...also jersey num?-->
+    <!-- Inventory num -- auto increment? -->
+    
+    <INPUT type="submit" value="Add athlete"/>
+    
+    </FORM>
+    
+    </BODY>
+    </HTML>

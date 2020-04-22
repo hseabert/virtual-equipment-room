@@ -24,7 +24,6 @@ tr:nth-child(even) {background-color: #f2f2f2}
 <th>Id</th>
 <th>First Name</th>
 <th>Last Name</th>
-<th>Role</th>
 </tr>
 
 <?php
@@ -36,11 +35,10 @@ $qStr = "SELECT * FROM worker;";
 	if($qRes != FALSE){
 	while($row = $qRes->fetch())
 	{
-		$id=$row['sid'];
+		$id=$row['wid'];
 		$fname=$row['fname'];
     $lname=$row['lname'];
-    $role=$row['role'];
-		$str="<TR><TD>$id</TD><TD>$fname</TD><TD>$lname</TD><TD>$role</TD></TR>\n";
+		$str="<TR><TD>$id</TD><TD>$fname</TD><TD>$lname</TD></TR>\n";
 		print $str;
 	}
 	}

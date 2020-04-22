@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	    <!-- style sheet -->
+		<link rel="stylesheet" href="dashboard_style.css">
+	<title>Admin Dashboard</title>
+	<?php include("bootstrap.php"); ?>
+	<style>
+	.btn-group button {
+		display: block; 
+		background-color: #002F6c; 
+		border: 2px solid black; 
+		color: white;
+		padding: 10px 24px;
+		cursor: pointer;
+		width: 11%; 
+		/*margin-bottom: 5px;
+		margin-top: 5px;*/
+	}
+
+	/* Add a background color on hover */
+	.btn-group button:hover {
+		background-color: #E87722;
+	}
+	
+	.btn-group button:not(:last-child) {
+		border-bottom: none; /* Prevent double borders */
+	}
+
+	.search {
+	  width: 25%;
+	  display: flex;
+	  position: absolute;
+	  top: 5;
+	  right: 5px;
+	}
+
+	.searchTerm {
+	  width: 100%;
+	  border: 3px solid #002F6c;
+	  border-right: none;
+	  padding: 5px;
+	  height: 20px;
+	  border-radius: 5px 0 0 5px;
+	  outline: none;
+	  color: #002F6c;
+	}
+
+	.searchTerm:focus{
+	  color: #00B4CC;
+	}
+
+	.btn-search {
+	  background: #002F6c;
+	  text-align: center;
+	  color: #FFFFFF;
+	  cursor: pointer;
+	  font-size: 20px;
+	  border: 2px solid black;
+	}
+	
+	.btn-search:hover {
+		background-color: #E87722;
+	}
+	
+	
+	.search-results {
+		text-align: center;
+		padding: 200px 25px;
+		font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+		border: 2px solid black;
+		color: black;
+		width: 70%;
+		margin: auto;
+		position: absolute;
+		left: 16%;
+		bottom: 12%;
+	}
+	
+	.top {
+		position: relative;
+		text-align: left;
+		text-indent: 10px;
+		font-size: 25px;
+		padding: 30px 0;
+		font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+		color: white;
+		background-color: #002F6c; 
+		border: 2px solid black;
+		width: 100%;
+		margin: auto;
+	}
+	
+	.btn-logout button{
+		position: relative;
+		float: right;
+		border: 2px solid black;
+		padding: 5px 12px;
+	}
+	
+	.btn-logout button:hover {
+		background-color: #D2D2D2;
+	}
+	
+	.dropdown {
+		display: block;
+		position: relative;
+		width: 11%;
+	}
+	
+	.dropdown button{
+		display: block; 
+		background-color: #002F6c; 
+		border: 2px solid black; 
+		border-top: none;
+		color: white;
+		padding: 10px 24px;
+		cursor: pointer; 
+		width: 100%;
+	}
+	
+	.dropdown:hover button {
+		background-color: #E87722;
+	}
+	
+	.dropdown div {
+		margin-top: 1px;
+		background-color: #002F6c;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+		z-index: 1;
+		visibility: hidden;
+		position: absolute;
+		min-width: 11%;
+	}
+	
+	.dropdown:hover div {
+		visibility:visible;
+	}
+
+	.dropdown div a{
+		font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+		font-size: 13px;
+		text-align: center;
+		text-decoration: none;
+		display: block;
+		padding: 10px 24px;
+		color: white;
+		border: 2px solid black;
+		white-space: nowrap;
+	}
+	
+	.dropdown div a:hover {
+		background-color: #E87722;
+	}
+	
+	.dropdown div a:not(:last-child) {
+		border-bottom: none; /* Prevent double borders */
+	}
+	
+	.container-box {
+		margin: 2%;
+	}
+	
+
+	</style>
+	
+</head>
+
+
+<body>
+	<div class="top">
+		<div class="card-body">
+			Import Excel File
+		</div>		
+		<div class="btn" style="align: right">
+			<button class="logoutbtn" onClick="window.location.href='http://www.cs.gettysburg.edu/~seabha01/cs360/proj5/addAthlete.php';">Back</button>
+		</div>
+	</div>
+	
+	<body>
+	<div class="container-box">
+		<form method="post" enctype="multipart/form-data" action="import.php">
+			<label>Select Excel File</label>
+			<input type="file" name="excelFile" />
+			<br />
+			<input type="submit" name="import" class="btn btn-info" value="Import" />
+		</form>
+	</div>
+ </body>
+</body>
+</html>
+
+<?php
+include_once("db_connect.php");
+print($db);
+print($_POST["import"]);
+
+if(isset($_POST["import"])){
+
+	$extension = end(explode(".", $_FILES["excel"]["name"])); // For getting Extension of selected file
+	$allowed_extension = array("xls", "xlsx", "csv"); //allowed extension
+	if(in_array($extension, $allowed_extension)){ //check selected file extension is present in allowed extension array
+		print("Import Success");
+		
+		$phpExcel = PHPExcel_IOFactory::load($file);
+		
+	{
+
+
+}
+
+
+?>

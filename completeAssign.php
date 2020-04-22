@@ -27,7 +27,7 @@
 				<button class="logoutbtn">Log Out</button>
             </div>
             <div class="btn" style="align: right">
-				<button class="logoutbtn" onClick="window.location.href='http://www.cs.gettysburg.edu/~seabha01/cs360/proj5/adminhomePHP_test.php';">Back</button>
+				<button class="logoutbtn" onClick="window.location.href='http://www.cs.gettysburg.edu/~seabha01/cs360/proj5/addAthlete.php';">Back</button>
 			</div>
 		</div>
         <br>
@@ -37,26 +37,19 @@
             // connect to db
             include_once("db_connect.php");
 
-            // get all values from $_POST
-            $sid=$_POST['sid'];
-            $fname=$_POST['fname'];
-            $lname=$_POST['lname'];
-            $class=$_POST['class'];
-            $scode=$_POST['scode'];
-            $jnum=$_POST['jnum'];
+            // get values from post 
 
             //generate the query
-            $query="INSERT INTO athlete(id, fname, lname, class, scode, jnum) VALUES('$sid', '$fname', '$lname', '$class', '$scode', '$jnum');";
 
             // query the db
-            $result=$db->query($query);
 
+            // check result and print appropriate message
             if($result != FALSE)
             {
-              print "<h3>You're all set. $fname was successfully registered.</h3>";
+                // print success message
             }
             else{
-              print "<h3>Oops...something went wrong. Please try again.</h3>";
+                // print error message
             }
           ?>
         </div>
