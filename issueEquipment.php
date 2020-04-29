@@ -43,9 +43,13 @@
                 <label for="athlete">Select Athlete: </label>
                 <select class="select-css" name="selectAth">
                 <?php
-                        $team = str_replace("'", "\'", $team);
+                        // still can't get this to work
+                        // $team = str_replace("'", "\'", $team);
+                        $name = mysql_real_escape_string($name);
                         $qStr = "SELECT id, fname, lname FROM athlete JOIN sport ON athlete.scode = sport.scode
-                            WHERE sport.sname = '$team';";
+                            WHERE sport.sname = '".$team."';";
+                        // $qStr = 'SELECT id, fname, lname FROM athlete NATURAL JOIN sport WHERE sport.sname = "$team";';
+                        //     echo "qStr: ".$qStr;
 
                         $qRes = $db->query($qStr);
                                             
@@ -75,8 +79,8 @@
                 <?php
                     // this is the query string
                     // $qStr = "SELECT inum, etype, eq_size, color, brand, model FROM equipment WHERE etype='$type';";
-                    $qStr = "SELECT DISTINCT equipment.inum, etype, eq_size, color, brand, model FROM equipment
-                    JOIN eq_assign ON equipment.inum <> eq_assign.inum WHERE etype='$type';";
+                    $qStr = "SELECT DISTINCT inum, etype, eq_size, color, brand, model 
+                    FROM equipment WHERE inum NOT IN (SELECT inum FROM eq_assign) AND etype = '$type';";
 
                     // we will call db to execute it 
                     //(the result of query will be another obj)

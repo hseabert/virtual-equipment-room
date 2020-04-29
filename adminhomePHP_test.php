@@ -43,8 +43,6 @@
 			<button onClick="toggleDisplay('issue-item-field');">Issue Equipment</button>
 			<button onClick="toggleDisplay('dne');">Return Equipment</button>
 			<button onClick="toggleDisplay('add-item-field');">Add Equipment</button>
-			<button onClick="toggleDisplay('dne');">Delete Equipment</button>
-            <button onClick="toggleDisplay('dne');">View Teams</button>
             <button onClick="window.location.href='http://www.cs.gettysburg.edu/~seabha01/cs360/proj5/import.html';">Import Spreadsheet</button>
 			</div>
 
@@ -194,30 +192,6 @@
                                 
                             </select>
                             <BR/>
-
-                            <!-- <label for="athlete">Select Athlete: </label> -->
-                            <!-- <select class="select-css" name="selectAth"> -->
-                                 <!-- <?php
-                                    // $qStr = "SELECT fname, lname FROM athlete;";
-                                    // $qRes = $db->query($qStr);
-                                    
-                                    // if ($qRes != FALSE){
-                                    //     while ($row = $qRes->fetch()){
-                                    //         // access similarly to a hashtable
-                                    //         $fname = $row['fname'];
-                                    //         $lname = $row['lname'];
-
-                                    //         print "<p>fname: $fname</p>";
-                                    //         print "<p>lname: $lname</p>";
-                                
-                                    //         // we have to construct a string to print each row (including cols) of the table
-                                    //         $str = "<option value='$fname $lname'>$fname $lname</option>";
-                                    //         print $str;
-                                    //     }
-                                    // }
-                                ?> -->
-                            <!-- </select> -->
-                            <!-- <BR/>  -->
                             
                             <INPUT class="submit-css" type="submit" value="Next"/>
                             

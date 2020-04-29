@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Athlete Dashboard</title>
+	<?php include("bootstrap.php"); ?>
+	<style>
+	.btn-group button {
+		display: block; 
+		background-color: #002F6c; 
+		border: 2px solid black; 
+		color: white;
+		padding: 10px 24px;
+		cursor: pointer;
+		width: 11%; 
+	}
+
+	.btn-group button:not(:last-child) {
+		border-bottom: none; /* Prevent double borders */
+	}
+
+	/* Add a background color on hover */
+	.btn-group button:hover {
+		background-color: #E87722;
+	}
+
+	.search {
+	  width: 25%;
+	  display: flex;
+	  position: absolute;
+	  top: 5;
+	  right: 5px;
+	}
+
+	.searchTerm {
+	  width: 100%;
+	  border: 3px solid #002F6c;
+	  border-right: none;
+	  padding: 5px;
+	  height: 20px;
+	  border-radius: 5px 0 0 5px;
+	  outline: none;
+	  color: #002F6c;
+	}
+
+	.searchTerm:focus{
+	  color: #00B4CC;
+	}
+
+	.btn-search {
+	  border: 1px solid #002F6c;
+	  background: #002F6c;
+	  text-align: center;
+	  color: #FFFFFF;
+	  cursor: pointer;
+	  font-size: 20px;
+	  border: 2px solid black;
+	}
+	
+	.btn-search:hover {
+		background-color: #E87722;
+	}
+	
+	.search-results {
+		text-align: center;
+		padding: 100px 0;
+		font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+		border: 2px solid black;
+		color: black;
+		width: 70%;
+		margin: auto;
+		margin-top: 1%;
+	}
+	
+	.cardTop {
+		position: relative;
+		text-align: left;
+		text-indent: 10px;
+		font-size: 25px;
+		padding: 30px 0;
+		font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+		color: white;
+		background-color: #002F6c; 
+		border: 2px solid black;
+		width: 100%;
+		margin: auto;
+	}
+	
+	.btn-logout button {
+		position: relative;
+		float: right;
+		border: 2px solid black;
+		padding: 5px 12px;
+	}
+	
+	.btn-logout button:hover {
+		background-color: #D2D2D2;
+	}
+	
+	.issue-label {
+		position: relative;
+		font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+		text-align: center;
+		margin-left: 225px;
+		font-size: 25px;
+		border: 2px solid #002F6c;
+		width: 225px;
+		background-color: #E87722;
+		color: white;
+	}
+
+}
+	</style>
+</head>
+
+
+<body>
+	<div>
+		<div class="cardTop">
+			<div class="card-body">
+				Athlete Homepage
+			</div>
+			<div class="btn-logout">
+				<button>Log Out</button>
+			</div>
+		</div>
+		<br>		
+		<div class="search">
+			<input type="text" class="searchTerm" placeholder="Item">
+			<button type="submit" class="btn-search">
+			<i class="fa fa-search"></i>Search
+			</button>
+		</div>
+		
+		<br><br>
+	
+		<div class="issue-label">
+			<div class="card-body">
+				Your Issued Items
+			</div>
+		</div>
+	
+		<div class="search-results">
+			<div class="card-body">
+				Issued items will appear here
+			</div>
+		</div>
+	</div>
+	
+	
+	
+<br><br>
+
+	
+
+</body>
+</html>
